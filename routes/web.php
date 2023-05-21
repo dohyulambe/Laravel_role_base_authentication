@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
 
 
 /*
@@ -63,7 +64,28 @@ Route::delete('/menu', [MenuController::class, 'destroy'])->name('menu.destroy')
     // order menu route
 
     Route::get('/order/list', [OrderController::class, 'index'])->name('order.list');
-    Route::get('/order/make_order', [OrderController::class, 'orderindex'])->name('order');
+    Route::get('/order', [OrderController::class, 'orderindex'])->name('order');
+
+    // nextblog routes
+
+    Route::get('/nextern', [MainController::class, 'index'])->name('index');
+
+// Route::resource('blog', BlogController::class);
+Route::get('/blog', [BlogController::class, 'create'])->name('blog.create');
+Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
+Route::get('blog/{blog}', [BlogController::class, 'show'])->name('blog.show');
+Route::get('blog/{blog}/edit', [BlogController::class, 'edit'])->name('blog.edit');
+Route::patch('blog/{blog}/update', [BlogController::class, 'update'])->name('blog.update');
+Route::delete('blog/{blog}/delete', [BlogController::class, 'destroy'])->name('blog.destroy');
+
+
+// Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 
 

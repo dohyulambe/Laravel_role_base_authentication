@@ -24,16 +24,16 @@
         @method('PATCH')
         @csrf
         <div class="form-group">
-            <label for="txtFirstName">First Name:</label>
-            <input type="text" class="form-control" id="txtFirstName" placeholder="Enter First Name" name="txtFirstName" value="{{ $menu->first_name }}">
+            <label for="txtFirstName">Meal Name:</label>
+            <input type="text" class="form-control" id="txtFirstName" placeholder="Enter Meal Name" name="txtFirstName" value="{{ $menu->first_name }}">
         </div>
         <div class="form-group">
-            <label for="txtLastName">Last Name:</label>
+            <label for="txtLastName">Image:</label>
             <input type="text" class="form-control" id="txtLastName" placeholder="Enter Last Name" name="txtLastName" value="{{ $menu->last_name }}">
         </div>
         <div class="form-group">
-            <label for="txtAddress">Address:</label>
-            <textarea class="form-control" id="txtAddress" name="txtAddress" rows="10" placeholder="Enter Address">{{ $menu->address }}</textarea>
+            <label for="txtAddress">Meal Description:</label>
+            <textarea class="form-control" id="txtAddress" name="txtAddress" rows="10" placeholder="Enter Meal Description">{{ $menu->address }}</textarea>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>

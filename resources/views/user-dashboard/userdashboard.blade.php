@@ -21,14 +21,14 @@
               <div>
                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-                <a href={{ url('order/make_order') }} class="btn-book animate__animated animate__fadeInUp scrollto">make order</a>
+                <a href={{ url('order') }} class="btn-book animate__animated animate__fadeInUp scrollto">make order</a>
 
               </div>
             </div>
           </div>
         </div>
 
-        {{-- <!-- Slide 2 -->
+        <!-- Slide 2 -->
         <div class="carousel-item" style="background-image: url(userassets/img/slide/slide-2.jpg);">
           <div class="carousel-container">
             <div class="carousel-content">
@@ -37,7 +37,7 @@
               <div>
                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-                <a href={{ url('order/make_order') }} class="btn-book animate__animated animate__fadeInUp scrollto">make order</a>
+                <a href={{ url('order') }} class="btn-book animate__animated animate__fadeInUp scrollto">make order</a>
               </div>
             </div>
           </div>
@@ -52,12 +52,12 @@
               <div>
                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-                <a href={{ url('order/make_order') }} class="btn-book animate__animated animate__fadeInUp scrollto">make order</a>
+                <a href={{ url('order') }} class="btn-book animate__animated animate__fadeInUp scrollto">make order</a>
 
               </div>
             </div>
           </div>
-        </div> --}}
+        </div>
 
       </div>
 
@@ -816,6 +816,7 @@
       </form>
 
     </div>
+    
   </section><!-- End Contact Section -->
 
 </main><!-- End #main -->

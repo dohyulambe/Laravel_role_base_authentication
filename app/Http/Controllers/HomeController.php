@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Blog;
+
 class HomeController extends Controller
 {
     /**
@@ -61,4 +63,16 @@ class HomeController extends Controller
     {
         //
     }
+
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
+    public function dashboard()
+    {
+        $blogs = Blog::orderBy('created_at', 'Desc')->where('user_id', auth()->id())->get();
+        return view('dashboard', compact('blogs'));
+    }
+
 }
